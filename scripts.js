@@ -7,7 +7,6 @@ document.getElementById("randomize").addEventListener("click", () => {
     randNote1 = randomNote();
     randNote2 = randomNote();
     document.getElementById("2randomnotes").innerHTML = randNote1 + " - " + randNote2;
-    console.log("test");
 });
 
 document.getElementById("showNumSteps").addEventListener("click", () => {
