@@ -4,8 +4,8 @@ let randNote2;
 // Button Clicks
 
 document.getElementById("randomize").addEventListener("click", () => {
-    note1 = randomNote();
-    note2 = randomNote();
+    randNote1 = randomNote();
+    randNote2 = randomNote();
     document.getElementById("2randomnotes").innerHTML = randNote1 + " - " + randNote2;
     console.log("test");
 });
