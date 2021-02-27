@@ -1,9 +1,31 @@
 const noteCircle = [["A","A"], ["A#","Bb"], ["B","B"], ["C","C"], ["C#","Db"], ["D","D"], ["D#","Eb"], ["E","E"], ["F","F"], ["F#","Gb"], ["G","G"], ["G#","Ab"]];
-
+let randNote1;
+let randNote2;
 // Button Clicks
 
+document.getElementById("randomize").addEventListener("click", () => {
+    note1 = randomNote();
+    note2 = randomNote();
+    document.getElementById("2randomnotes").innerHTML = randNote1 + " - " + randNote2;
+    console.log("test");
+});
 
+document.getElementById("showNumSteps").addEventListener("click", () => {
+    let numSteps = findNoteDistance(randNote1, randNote2);
+    if (isNaN(numSteps)) {
+        document.getElementById("numSteps").innerHTML = "Click 'Generate Random Notes' First";
+    } else {
+        document.getElementById("numSteps").innerHTML = numSteps;
+    }
+});
 
+document.getElementById("calculateDistance").addEventListener("click", () => {
+    let note1 = document.getElementById("note1").value;
+    let note2 = document.getElementById("note2").value;
+    document.getElementById("note1label").innerHTML = note1;
+    document.getElementById("note2label").innerHTML = note2;
+    document.getElementById("distance").innerHTML = findNoteDistance(note1, note2);
+});
 
 // LOGIC
 

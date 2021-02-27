@@ -2,21 +2,20 @@
     <head>
         <meta charset="UTF-8">
         <title>Note Circle</title>
-        <script src="scripts.js"></script>
     </head>
     <body>
         <div>
             <h2>2 Random Notes</h2>
-            <button type="button">Randomize</button>
+            <button type="button" id="randomize">Generate Random Notes</button>
             <p id="2randomnotes"></p>
             <h2>Semitone Steps</h2>
-            <button type="button">Show</button>
-            <p id="numSemitones"></p>
+            <button type="button" id="showNumSteps">Show Number of Steps</button>
+            <p id="numSteps"></p>
         </div>
         <div>
             <h2>Distance Between 2 Notes</h2>
             <label for="note1-select">Note 1</label>
-            <select name="note1">
+            <select name="note1" id="note1">
                 <option value="A">A</option>
                 <option value="A#">A#</option>
                 <option value="Bb">Bb</option>
@@ -36,7 +35,7 @@
                 <option value="Ab">Ab</option>
             </select>
             <label for="note2-select">Note 2</label>
-            <select name="note2">
+            <select name="note2" id="note2">
                 <option value="A">A</option>
                 <option value="A#">A#</option>
                 <option value="Bb">Bb</option>
@@ -55,8 +54,12 @@
                 <option value="G#">G#</option>
                 <option value="Ab">Ab</option>
             </select>
-            <button type="button">Calculate Distance</button>
-            <p>Distance between Note 1 and Note 2: <span id="distance"></span></p>
+            <button type="button" id="calculateDistance">Calculate Distance</button>
+            <p>Distance between <span id="note1label">Note 1</span> and <span id="note2label">Note 2</span>: <span id="distance"></span></p>
         </div>
+        <div>
+            <img src="https://jtgt-static.b-cdn.net/images/modules/PMT1/MT-101.png" alt="Note Circle from Justin Guitar" width="50%">
+        </div>
+    <script src="scripts.js"></script>
     </body>
-</html>
+    </html>
